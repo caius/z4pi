@@ -1,0 +1,22 @@
+version: "v1.0"
+name: "z4pi"
+
+agent:
+  machine:
+    type: "e1-standard-2"
+  containers:
+    - name: "main"
+      image: "registry.semaphoreci.com/golang:latest"
+
+blocks:
+  - name: "Build project"
+    task:
+      jobs:
+        - name: Setup
+          commands:
+            - checkout
+            - make build
+        - name: Test
+          commands:
+            - checkout
+            - make test
