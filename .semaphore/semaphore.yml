@@ -4,7 +4,9 @@ name: "z4pi"
 agent:
   machine:
     type: "e1-standard-2"
-    os_image: "ubuntu2004"
+  containers:
+    - name: "main"
+      image: "registry.semaphoreci.com/go:latest"
 
 blocks:
   - name: "Build project"
@@ -13,10 +15,8 @@ blocks:
         - name: Setup
           commands:
             - checkout
-            - sem-version go 1.17.1
             - make build
         - name: Test
           commands:
             - checkout
-            - sem-version go 1.17.1
             - make test
