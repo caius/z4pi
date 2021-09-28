@@ -6,7 +6,7 @@ agent:
     type: "e1-standard-2"
   containers:
     - name: "main"
-      image: "registry.semaphoreci.com/go:latest"
+      image: "registry.semaphoreci.com/golang:latest"
 
 blocks:
   - name: "Build project"
