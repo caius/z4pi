@@ -13,3 +13,6 @@ There’s a third party device you can plug in to allow one-press roof up/down f
 ## Functionality
 
 Currently implemented is … nothing.
+
+- [ ] Serial reading logged to file
+- [ ] Webserver listening / exposing logfile
