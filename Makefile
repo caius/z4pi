@@ -13,7 +13,7 @@ build/z4pi-server: $(GO_FILES)
 	go build -o build/z4pi-server cmd/server/main.go
 
 build/z4pi-server-arm: $(GO_FILES)
-	GOOS=linux GOARCH=arm go build -o build/z4pi-server cmd/server/main.go
+	GOOS=linux GOARCH=arm go build -o build/z4pi-server-arm cmd/server/main.go
 
 .PHONY: clean
 clean:
